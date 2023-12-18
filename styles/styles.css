@@ -12,6 +12,7 @@
 
 :root {
   /* colors */
+  --highlight-color: #035fe6;
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: white;
@@ -190,6 +191,32 @@ main .section {
   padding: 64px 16px;
 }
 
+main table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main table th {
+  border-bottom: 1px solid var(--highlight-color);
+}
+
+main table td {
+  border-bottom: 1px solid var(--text-color);
+}
+
+main table th,
+main table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+}
+
+main table td:nth-child(1),
+main table td:nth-child(2) {
+  width: 10%;
+  text-wrap: nowrap;
+}
+
 @media (width >= 600px) {
   main .section {
     padding: 64px 32px;
@@ -200,6 +227,11 @@ main .section {
   .section > div {
     max-width: 1200px;
     margin: auto;
+  }
+
+  main table th,
+  main table td {
+    padding: 8px 16px;
   }
 }
 
